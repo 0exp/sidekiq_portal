@@ -1,0 +1,14 @@
+inherit_gem:
+  armitage-rubocop:
+    - lib/rubocop.general.yml
+    - lib/rubocop.rspec.yml
+
+AllCops:
+  UseCache: true
+  TargetRubyVersion: 2.5.1
+    - bin/console
+    - lib/**/*.rb
+    - spec/**/*.rb
+    - Gemfile
+    - Rakefile
+    - sidekiq-scheduler-mock.gemspec

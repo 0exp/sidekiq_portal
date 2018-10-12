@@ -1,4 +1,6 @@
-require "sidekiq/scheduler/mock/version"
+# frozen_string_literal: true
+
+require 'sidekiq/scheduler/mock/version'
 
 module Sidekiq
   module Scheduler
