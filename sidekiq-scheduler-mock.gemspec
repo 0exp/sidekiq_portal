@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
   end
 
   spec.add_development_dependency 'armitage-rubocop', '~> 0.10.0'
-  spec.add_development_dependency 'rspec',            '~> 3.8'
+  spec.add_development_dependency 'rspec',            '~> 3.8.0'
   spec.add_development_dependency 'coveralls',        '~> 0.8.22'
   spec.add_development_dependency 'simplecov',        '~> 0.16.1'
 
