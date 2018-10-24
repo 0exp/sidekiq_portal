@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'sidekiq_scheduler_mock/version'
 
 Gem::Specification.new do |spec|
-  spec.required_ruby_version = '>= 2.3.7'
+  spec.required_ruby_version = '>= 2.3.8'
 
   spec.name          = 'sidekiq-scheduler-mock'
   spec.version       = SidekiqSchedulerMock::VERSION
@@ -26,10 +26,18 @@ Gem::Specification.new do |spec|
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(spec|features)/}) }
   end
 
+  spec.add_dependency 'qonfig'
+  spec.add_dependency 'concurrent-ruby'
+  spec.add_dependency 'activesupport'
+  spec.add_dependency 'fugit'
+
   spec.add_development_dependency 'armitage-rubocop', '~> 0.10.0'
   spec.add_development_dependency 'rspec',            '~> 3.8.0'
   spec.add_development_dependency 'coveralls',        '~> 0.8.22'
   spec.add_development_dependency 'simplecov',        '~> 0.16.1'
+
+  spec.add_development_dependency 'timecop'
+  spec.add_development_dependency 'sidekiq'
 
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake'

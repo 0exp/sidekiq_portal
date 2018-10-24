@@ -14,6 +14,11 @@ require 'bundler/setup'
 require 'sidekiq_scheduler_mock'
 require 'pry'
 
+require 'timecop'
+require 'sidekiq'
+require 'sidekiq/api'
+require 'sidekiq/testing'
+
 RSpec.configure do |config|
   config.filter_run_when_matching :focus
   config.shared_context_metadata_behavior = :apply_to_host_groups
