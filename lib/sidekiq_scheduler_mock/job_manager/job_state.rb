@@ -117,6 +117,6 @@ class SidekiqSchedulerMock::JobManager::JobState
   # @api private
   # @since 0.1.0
   def time_has_come?
-    current_time < next_time
+    current_time >= next_time
   end
 end
