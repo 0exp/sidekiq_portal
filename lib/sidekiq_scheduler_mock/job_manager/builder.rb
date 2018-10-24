@@ -27,7 +27,7 @@ class SidekiqSchedulerMock
           cron  = options['cron']
           every = options['every']
 
-          raise TimeConfigNotFoundError if cron.blank? || every.blank?
+          raise TimeConfigNotFoundError if cron.blank? && every.blank?
 
           job_state = JobManager::JobState.new(
             job_klass: job_klass,

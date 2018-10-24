@@ -4,6 +4,7 @@ require 'fugit'
 require 'qonfig'
 require 'concurrent/map'
 require 'active_support/core_ext/time'
+require 'active_support/core_ext/object'
 
 # @api public
 # @since 0.1.0
