@@ -53,12 +53,13 @@ class SidekiqSchedulerMock
       state_registry.include?(job_klass)
     end
 
+    # @param block [Proc]
     # @return [Enumerator]
     #
     # @api private
     # @since 0.1.0
-    def each_job
-      block_given? ? state_registry.jobs.each(&Proc.new) : state_registry.jobs.each
+    def each_job(&block)
+      block_given? ? state_registry.each_job(&block) : state_registry.each_job
     end
   end
 end

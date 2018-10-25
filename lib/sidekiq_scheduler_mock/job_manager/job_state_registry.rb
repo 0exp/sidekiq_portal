@@ -43,4 +43,13 @@ class SidekiqSchedulerMock::JobManager::JobStateRegistry
   def include?(job_klass)
     state_data.key?(job_klass)
   end
+
+  # @param block [Proc]
+  # @return [Enumerator]
+  #
+  # @api private
+  # @since 0.1.0
+  def each_job(&block)
+    block_given? ? state_data.keys.each(&block) : state_data.keys.each
+  end
 end
