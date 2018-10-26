@@ -15,7 +15,7 @@ module SidekiqSchedulerMock::Extensions
       current_time = timezoner.at(Time.current)
 
       jobs.each do |job|
-        next if job.key?('at') && timezoner.at(job['at']) >= current_time
+        next if job.key?('at') && timezoner.at(job['at']) > current_time
 
         Sidekiq::Queues.delete_for(job['jid'], job['queue'], job['class'])
         Sidekiq::Testing.constantize(job['class']).process_job(job)
