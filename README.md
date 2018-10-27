@@ -7,3 +7,4 @@ In active development...
 - timelines with timepoitns;
 - retries;
 - rspec matchers;
+- support for raw Sidekiq::Worker classes;
