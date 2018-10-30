@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-class SidekiqSchedulerMock
+class Sidekiq::Portal
   # @api private
   # @since 0.1.0
   module JobRunner::Builder
     class << self
       # @option retries [Integer, NilClass]
-      # @return [SidekiqSchedulerMock::JobRunner]
+      # @return [Sidekiq::Portal::JobRunner]
       #
       # @api private
       # @since 0.1.0

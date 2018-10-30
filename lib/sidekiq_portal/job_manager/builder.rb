@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-class SidekiqSchedulerMock
+class Sidekiq::Portal
   # @api private
   # @since 0.1.0
   class JobManager::Builder
     class << self
       # @option scheduler_config [Hash]
       # @option timezone [String]
-      # @return [SidekiqSchedulerMock::JobManager]
+      # @return [Sidekiq::Portal::JobManager]
       #
-      # @raise [SidekiqSchedulerMock::JobConfigNotFoundError]
-      # @raise [SidekiqSchedulerMock::TimeConfigNotFoundError]
+      # @raise [Sidekiq::Portal::JobConfigNotFoundError]
+      # @raise [Sidekiq::Portal::TimeConfigNotFoundError]
       #
       # @api private
       # @since 0.1.0

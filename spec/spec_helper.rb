@@ -11,7 +11,7 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
 SimpleCov.start { add_filter 'spec' }
 
 require 'bundler/setup'
-require 'sidekiq_scheduler_mock'
+require 'sidekiq_portal'
 require 'pry'
 
 require 'timecop'

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class SidekiqSchedulerMock
+class Sidekiq::Portal
   # @api public
   # @since 0.1.0
   Error = Class.new(StandardError)

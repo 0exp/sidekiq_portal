@@ -11,4 +11,8 @@ AllCops:
     - spec/**/*.rb
     - Gemfile
     - Rakefile
-    - sidekiq-scheduler-mock.gemspec
+    - sidekiq-portal.gemspec
+
+Naming/FileName:
+  Exclude:
+    - lib/sidekiq-portal.rb

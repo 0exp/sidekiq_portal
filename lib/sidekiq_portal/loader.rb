@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class SidekiqSchedulerMock
+class Sidekiq::Portal
   # @api private
   # @since 0.1.0
   module Loader
@@ -19,7 +19,7 @@ class SidekiqSchedulerMock
 
       # @return [void]
       #
-      # @raise [SidekiqSchedulerMock::LoadError]
+      # @raise [Sidekiq::Portal::LoadError]
       #
       # @api private
       # @since 0.1.0
@@ -44,7 +44,7 @@ class SidekiqSchedulerMock
       # @api private
       # @since 0.1.0
       def init_global_instance!
-        SidekiqSchedulerMock.global_instance
+        Sidekiq::Portal.global_instance
       end
     end
   end

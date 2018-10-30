@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module SidekiqSchedulerMock::Extensions
+module Sidekiq::Portal::Extensions
   # @api private
   # @since 0.1.0
   module SidekiqWorker
@@ -9,7 +9,7 @@ module SidekiqSchedulerMock::Extensions
     # @api public
     # @since 0.1.0
     def run_scheduled
-      timezone  = SidekiqSchedulerMock.config[:default_timezone]
+      timezone  = Sidekiq::Portal.config[:default_timezone]
       timezoner = ActiveSupport::TimeZone[timezone]
 
       current_time = timezoner.at(Time.current)

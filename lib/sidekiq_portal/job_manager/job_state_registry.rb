@@ -2,7 +2,7 @@
 
 # @api private
 # @since 0.1.0
-class SidekiqSchedulerMock::JobManager::JobStateRegistry
+class Sidekiq::Portal::JobManager::JobStateRegistry
   # @return [Concurrent::Map]
   #
   # @api private
@@ -17,7 +17,7 @@ class SidekiqSchedulerMock::JobManager::JobStateRegistry
     @state_data = Concurrent::Map.new
   end
 
-  # @param job_state [SidekiqSchedulerMock::JobManager::JobState]
+  # @param job_state [Sidekiq::Portal::JobManager::JobState]
   # @return [void]
   #
   # @api private
@@ -27,7 +27,7 @@ class SidekiqSchedulerMock::JobManager::JobStateRegistry
   end
 
   # @param job_klass [Class<ActiveJob::Base>]
-  # @return [SidekiqSchedulerMock::Jobs::State]
+  # @return [Sidekiq::Portal::Jobs::State]
   #
   # @api private
   # @since 0.1.0

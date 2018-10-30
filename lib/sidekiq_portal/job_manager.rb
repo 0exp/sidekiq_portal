@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class SidekiqSchedulerMock
+class Sidekiq::Portal
   # @api private
   # @sicne 0.1.0
   class JobManager
@@ -11,7 +11,7 @@ class SidekiqSchedulerMock
     class << self
       # @param scheduler_config [Hash]
       # @param timezone [String]
-      # @return [SidekiqSchedulerMock::JobManager]
+      # @return [Sidekiq::Portal::JobManager]
       #
       # @api private
       # @since 0.1.0
@@ -20,13 +20,13 @@ class SidekiqSchedulerMock
       end
     end
 
-    # @return [SidekiqSchedulerMock::JobManager::StateRegistry]
+    # @return [Sidekiq::Portal::JobManager::StateRegistry]
     #
     # @api private
     # @since 0.1.0
     attr_reader :state_registry
 
-    # @param state_registry [SidekiqSchedulerMock::JobManager::StateRegistry]
+    # @param state_registry [Sidekiq::Portal::JobManager::StateRegistry]
     # @return [void]
     #
     # @api private
@@ -36,7 +36,7 @@ class SidekiqSchedulerMock
     end
 
     # @param job_klass [Class<ActiveJob::Base>]
-    # @return [SidekiqSchedulerMock::JobManager::State]
+    # @return [Sidekiq::Portal::JobManager::State]
     #
     # @api private
     # @since 0.1.0

@@ -2,7 +2,7 @@
 
 # @api private
 # @since 0.1.0
-class SidekiqSchedulerMock::JobManager::JobState
+class Sidekiq::Portal::JobManager::JobState
   # @return [Class<ActiveJob::Base>]
   #
   # @api private

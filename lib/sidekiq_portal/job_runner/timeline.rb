@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class SidekiqSchedulerMock::JobRunner
+class Sidekiq::Portal::JobRunner
   # @api private
   # @since 0.1.0
   class Timeline

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module SidekiqSchedulerMock::Extensions
+module Sidekiq::Portal::Extensions
   # @api private
   # @since 0.1.0
   module Timecop
@@ -10,7 +10,7 @@ module SidekiqSchedulerMock::Extensions
     # @since 0.1.0
     def travel(*)
       super.tap do
-        SidekiqSchedulerMock.run_all
+        Sidekiq::Portal.run_all
         Sidekiq::Worker.run_scheduled
       end
     end
