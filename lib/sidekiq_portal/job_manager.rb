@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # @api private
-# @sicne 0.1.0
+# @since 0.1.0
 class Sidekiq::Portal::JobManager
   require_relative 'job_manager/job_state'
   require_relative 'job_manager/job_state_registry'
@@ -47,7 +47,7 @@ class Sidekiq::Portal::JobManager
   # @return [Boolean]
   #
   # @api private
-  # @sicne 0.1.0
+  # @since 0.1.0
   def schedulable?(job_klass)
     state_registry.include?(job_klass)
   end

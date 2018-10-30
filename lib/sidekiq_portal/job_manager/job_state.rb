@@ -6,7 +6,7 @@ class Sidekiq::Portal::JobManager::JobState
   # @return [Class<ActiveJob::Base>]
   #
   # @api private
-  # @sicne 0.1.0
+  # @since 0.1.0
   attr_reader :job_klass
 
   # @return [Time]
