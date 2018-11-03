@@ -2,12 +2,13 @@
 
 # @api private
 # @since 0.1.0
-class SidekiqSchedulerMock::JobRunner
+class Sidekiq::Portal::JobRunner
   require_relative 'job_runner/builder'
+  require_relative 'job_runner/timeline'
 
   class << self
     # @option retries [Integer, NilClass]
-    # @return [SidekiqSchedulerMock::JobRunner]
+    # @return [Sidekiq::Portal::JobRunner]
     #
     # @api private
     # @since 0.1.0
@@ -31,7 +32,7 @@ class SidekiqSchedulerMock::JobRunner
     @retries = retries
   end
 
-  # @param job_state [SidekiqSchedulerMock::JobManager::JobState]
+  # @param job_state [Sidekiq::Portal::JobManager::JobState]
   # @return [void]
   #
   # @api private

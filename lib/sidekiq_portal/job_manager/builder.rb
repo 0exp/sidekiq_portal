@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-class SidekiqSchedulerMock
+class Sidekiq::Portal
   # @api private
   # @since 0.1.0
   class JobManager::Builder
     class << self
       # @option scheduler_config [Hash]
       # @option timezone [String]
-      # @return [SidekiqSchedulerMock::JobManager]
+      # @return [Sidekiq::Portal::JobManager]
       #
-      # @raise [SidekiqSchedulerMock::JobConfigNotFoundError]
-      # @raise [SidekiqSchedulerMock::TimeConfigNotFoundError]
+      # @raise [Sidekiq::Portal::JobConfigNotFoundError]
+      # @raise [Sidekiq::Portal::TimeConfigNotFoundError]
       #
       # @api private
       # @since 0.1.0
@@ -27,7 +27,7 @@ class SidekiqSchedulerMock
           cron  = options['cron']
           every = options['every']
 
-          raise TimeConfigNotFoundError if cron.blank? || every.blank?
+          raise TimeConfigNotFoundError if cron.blank? && every.blank?
 
           job_state = JobManager::JobState.new(
             job_klass: job_klass,

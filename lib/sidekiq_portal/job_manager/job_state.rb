@@ -2,11 +2,11 @@
 
 # @api private
 # @since 0.1.0
-class SidekiqSchedulerMock::JobManager::JobState
+class Sidekiq::Portal::JobManager::JobState
   # @return [Class<ActiveJob::Base>]
   #
   # @api private
-  # @sicne 0.1.0
+  # @since 0.1.0
   attr_reader :job_klass
 
   # @return [Time]
@@ -117,6 +117,6 @@ class SidekiqSchedulerMock::JobManager::JobState
   # @api private
   # @since 0.1.0
   def time_has_come?
-    current_time < next_time
+    current_time >= next_time
   end
 end

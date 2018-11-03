@@ -5,16 +5,13 @@ cache: bandler
 matrix:
   fast_finish: true
   include:
-    - rvm: 2.3.8
-    - rvm: 2.4.5
-    - rvm: 2.5.3
-    - rvm: ruby-head
-    - rvm: jruby-head
+  - rvm: 2.3.8
+  - rvm: 2.4.5
+  - rvm: 2.5.3
+  - rvm: ruby-head
+  - rvm: jruby-head
   allow_failures:
-    - rvm: ruby-head
-    - rvm: jruby-head
+  - rvm: ruby-head
+  - rvm: jruby-head
 script:
-  - bundle exec rspec
-notifications:
-  slack:
-    secure: ZOJgB6CrrH4R6JVYDKvdcM2thx1pGKVWiNh5it1EiYU42UOjb4EAadDU7Im9mnP9etamQTdLO093hoiZtLu281U4Q00pyOJx/xiZRWZq/7PT8r/HPGq5JueUuQFBsTic8eTpCvDqisOc741n9hLIbH2QJQobzdZmaRSMsKN7kzTNKTUlQfU2R06vKfEI0x1X+Kf77ybyltJVTAgq2aOpX6RyeeInSib+7i/E0NjSfGNmq7o73II1bA89M33KLqZqX2L44NCPwqMt4gMB921nJuH0kIqcWnzBSCf3Ct13FWPjKvHshDGgwkREIwpyVcxEur7P6+IMoSrN3eJI75w+tsw3jO1r57jPucJ+uUxMcCDshRYrkV34FopZIifgPT5HNL1+dpOgHYO8P/2XC928YwFO0CynrENeLalCB/XL/znAIin28HjU7+Vn3MiRKmAwDyf7tRC3jHx73irwxSk0xOXckywx4Fw3jKpOcWlpfF93c3YaZ3Kc1FmGcDdKK4rkmiIJBa8xRWjtx9z7uhL/AZs43Q42+8Hd4WX99lzT3Itz252yzsZB9ybG9Q4LKu3B1zsfmTuhoZoNgJaugqIjUdvYxiaTZPVhl0O5dj1t5C0dqOk/dQFR0BHyaEuVuGPqm9QJz6UZ0Ms0jKPn+Hyk2zh0tu8NPxPd+uA12fvi7vA=
+- bundle exec rspec

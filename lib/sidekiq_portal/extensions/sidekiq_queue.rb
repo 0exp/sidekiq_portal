@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module SidekiqSchedulerMock::Extensions
+module Sidekiq::Portal::Extensions
   # @api private
   # @since 0.1.0
   module SidekiqQueue
