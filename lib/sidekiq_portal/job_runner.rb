@@ -4,7 +4,6 @@
 # @since 0.1.0
 class Sidekiq::Portal::JobRunner
   require_relative 'job_runner/builder'
-  require_relative 'job_runner/timeline'
 
   class << self
     # @option retries [Integer, NilClass]
