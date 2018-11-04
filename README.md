@@ -8,3 +8,4 @@ In active development...
 - retries;
 - rspec matchers;
 - support for raw Sidekiq::Worker classes;
+- support for Sidekiq::Cron;
