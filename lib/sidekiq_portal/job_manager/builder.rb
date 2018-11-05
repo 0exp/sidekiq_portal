@@ -19,13 +19,13 @@ class Sidekiq::Portal
         state_registry = JobManager::JobStateRegistry.new
 
         scheduler_config.each_pair do |series_name, options|
-          job_klass = options['class'].constantize rescue nil
-          job_klass ||= series_name.constantize rescue nil
+          job_klass = options['class'].to_s.constantize rescue nil
+          job_klass ||= series_name.to_s.constantize rescue nil
 
           raise JobConfigNotFoundError if job_klass.blank?
 
-          cron  = options['cron']
-          every = options['every']
+          cron  = options['cron'] || options[:cron]
+          every = options['every'] || options[:every]
 
           raise TimeConfigNotFoundError if cron.blank? && every.blank?
 

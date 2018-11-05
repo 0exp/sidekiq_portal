@@ -3,8 +3,6 @@
 # @api private
 # @since 0.1.0
 class Sidekiq::Portal::JobManager::JobState
-  require_relative 'job_state/timeline'
-
   # @return [Class<ActiveJob::Base>]
   #
   # @api private
