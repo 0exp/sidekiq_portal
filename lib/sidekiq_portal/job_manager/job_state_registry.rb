@@ -52,4 +52,23 @@ class Sidekiq::Portal::JobManager::JobStateRegistry
   def each_job(&block)
     block_given? ? state_data.keys.each(&block) : state_data.keys.each
   end
+
+  # @param block [Proc]
+  # @return [Enumerator]
+  #
+  # @api private
+  # @since 0.1.0
+  def each_state(&block)
+    block_given? ? state_data.values.each(&block) : state_data.values.each
+  end
+
+  # @param block [Proc]
+  # @return [Enumerator]
+  #
+  # @api private
+  # @since 0.1.0
+  def each_time_point(&block)
+    time_points = each_state.map(&:time_points).tap(&:flatten!).tap(&:sort!).tap(&:uniq!)
+    block_given? ? time_points.each(&block) : time_points.each
+  end
 end

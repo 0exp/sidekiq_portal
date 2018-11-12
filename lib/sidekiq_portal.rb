@@ -94,7 +94,11 @@ module Sidekiq
     # @api public
     # @since 0.1.0
     def run_all
-      job_manager.each_job { |job_klass| run(job_klass) }
+      job_manager.each_time_point do |time_point|
+        Timecop.freeze(time_point) do
+          job_manager.each_job { |job_klass| run(job_klass) }
+        end
+      end
     end
 
     # @return [void]

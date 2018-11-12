@@ -2,21 +2,38 @@
 
 describe 'Load Sidekiq Portal' do
   specify do
-    class LolJob; end
-    class KekJob; end
+    class LolJob
+      class << self
+        def perform_later
+          new.perform
+        end
+      end
+
+      def perform
+        puts "#{self.class.name} => #{Time.current}"
+      end
+    end
+
+    class KekJob
+      class << self
+        def perform_later
+          new.perform
+        end
+      end
+
+      def perform
+        puts "#{self.class.name} => #{Time.current}"
+      end
+    end
+
 
     Sidekiq::Portal.setup! do |config|
       config.scheduler_config = {
-        LolJob: { every: '5m' },
+        LolJob: { every: '15m' },
         KekJob: { every: '1h' },
       }
     end
 
-    timeline = Sidekiq::Portal::JobRunner::Timeline.new(
-      Time.current,
-      Time.current + 1.hour,
-      Fugit::Duration.parse('10m'),
-      'UTC'
-    )
+    Timecop.travel(Time.current + 2.hours)
   end
 end

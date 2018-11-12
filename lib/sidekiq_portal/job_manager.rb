@@ -7,6 +7,9 @@ class Sidekiq::Portal::JobManager
   require_relative 'job_manager/job_state_registry'
   require_relative 'job_manager/builder'
 
+  # @since 0.1.0
+  extend Forwardable
+
   class << self
     # @param scheduler_config [Hash]
     # @param timezone [String]
@@ -18,6 +21,9 @@ class Sidekiq::Portal::JobManager
       Builder.build(scheduler_config: scheduler_config, timezone: timezone)
     end
   end
+
+  # @since 0.1.0
+  def_delegators :state_registry, :each_job, :each_state, :each_time_point
 
   # @return [Sidekiq::Portal::JobManager::StateRegistry]
   #
@@ -50,14 +56,5 @@ class Sidekiq::Portal::JobManager
   # @since 0.1.0
   def schedulable?(job_klass)
     state_registry.include?(job_klass)
-  end
-
-  # @param block [Proc]
-  # @return [Enumerator]
-  #
-  # @api private
-  # @since 0.1.0
-  def each_job(&block)
-    block_given? ? state_registry.each_job(&block) : state_registry.each_job
   end
 end

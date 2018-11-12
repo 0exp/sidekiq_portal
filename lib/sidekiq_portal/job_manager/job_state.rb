@@ -3,6 +3,8 @@
 # @api private
 # @since 0.1.0
 class Sidekiq::Portal::JobManager::JobState
+  require_relative 'job_state/timeline'
+
   # @return [Class<ActiveJob::Base>]
   #
   # @api private
@@ -109,7 +111,15 @@ class Sidekiq::Portal::JobManager::JobState
   # @api private
   # @since 0.1.0
   def next_time
-    timezoner.at(time_plan.next_time(last_time))
+    timezoner.at(time_plan.next_time(last_time).seconds)
+  end
+
+  # @return [Array<Time>]
+  #
+  # @api private
+  # @since 0.1.0
+  def time_points
+    Timeline.time_points(last_time, current_time, time_plan, timezoner)
   end
 
   # @return [Boolean]
