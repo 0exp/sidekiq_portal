@@ -26,11 +26,10 @@ describe 'Load Sidekiq Portal' do
       end
     end
 
-
     Sidekiq::Portal.setup! do |config|
       config.scheduler_config = {
         LolJob: { every: '15m' },
-        KekJob: { every: '1h' },
+        KekJob: { every: '1h' }
       }
     end
 
