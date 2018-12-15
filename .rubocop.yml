@@ -6,6 +6,7 @@ inherit_gem:
 AllCops:
   UseCache: true
   TargetRubyVersion: 2.5.3
+  Include:
     - bin/console
     - lib/**/*.rb
     - spec/**/*.rb
