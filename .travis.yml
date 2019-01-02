@@ -1,7 +1,7 @@
 sudo: false
 language: ruby
 before_install: gem install bundler
-cache: bandler
+cache: bundler
 matrix:
   fast_finish: true
   include:
