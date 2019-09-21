@@ -9,3 +9,4 @@ In active development...
 - rspec matchers;
 - support for raw Sidekiq::Worker classes;
 - support for Sidekiq::Cron;
+- better specs :D
