@@ -1,6 +1,7 @@
 sudo: false
 language: ruby
 before_install: gem install bundler
+script: bundle exec rspec
 cache: bundler
 matrix:
   fast_finish: true
@@ -14,5 +15,3 @@ matrix:
   allow_failures:
   - rvm: ruby-head
   - rvm: jruby-head
-script:
-- bundle exec rspec

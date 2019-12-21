@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
-require 'sidekiq_scheduler_mock'
+require 'sidekiq_portal'
 
 require 'pry'
 Pry.start

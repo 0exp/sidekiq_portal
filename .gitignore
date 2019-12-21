@@ -1,6 +1,5 @@
 /.bundle/
 /.yardoc
-/Gemfile.lock
 /_yardoc/
 /coverage/
 /doc/
@@ -8,8 +7,10 @@
 /spec/reports/
 /tmp/
 .rspec_status
+Gemfile.lock
+/.idea
 .ruby-version
-gemfiles/*.lock
+/.vscode/
+/spec/artifacts/
+/gemfiles/*.gemfile.lock
 *.gem
-/spec/support/artifacts/*
-.rspec_status

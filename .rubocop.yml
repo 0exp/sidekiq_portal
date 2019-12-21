@@ -1,19 +1,24 @@
 inherit_gem:
   armitage-rubocop:
     - lib/rubocop.general.yml
+    - lib/rubocop.rake.yml
     - lib/rubocop.rspec.yml
 
 AllCops:
-  UseCache: true
   TargetRubyVersion: 2.6.5
   Include:
-    - bin/console
     - lib/**/*.rb
     - spec/**/*.rb
     - Gemfile
     - Rakefile
-    - sidekiq-portal.gemspec
+    - sidekiq_portal.gemspec
+    - bin/console
+    - bin/rspec
 
-Naming/FileName:
-  Exclude:
-    - lib/sidekiq-portal.rb
+# NOTE: support for old ruby versions
+Style/RedundantBegin:
+  Enabled: false
+
+# NOTE: too situative
+Metrics/ParameterLists:
+  Enabled: false
