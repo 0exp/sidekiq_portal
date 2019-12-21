@@ -28,12 +28,9 @@ Gem::Specification.new do |spec|
     f.match(%r{^(test|spec|features)/})
   end
 
-  spec.add_development_dependency 'armitage-rubocop'
-  spec.add_development_dependency 'rspec'
-  spec.add_development_dependency 'simplecov'
-
-  spec.add_development_dependency 'timecop'
-  spec.add_development_dependency 'sidekiq'
+  spec.add_development_dependency 'armitage-rubocop', '~> 0.77'
+  spec.add_development_dependency 'rspec',            '~> 3.9.0'
+  spec.add_development_dependency 'simplecov',        '~> 0.17.1'
 
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake'
