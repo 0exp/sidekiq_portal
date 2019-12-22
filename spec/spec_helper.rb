@@ -9,6 +9,12 @@ require 'bundler/setup'
 require 'sidekiq_portal'
 require 'pry'
 
+require 'timecop'
+require 'sidekiq'
+require 'sidekiq/api'
+require 'sidekiq/testing'
+
+
 RSpec.configure do |config|
   config.filter_run_when_matching :focus
   config.order = :random
