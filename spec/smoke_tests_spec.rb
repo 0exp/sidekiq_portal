@@ -14,7 +14,10 @@ describe 'Smoke tests' do
   end
 
   specify 'time traveling' do
-    class LolJob
+    stub_const('LolJobResults', [])
+    stub_const('KekJobResults', [])
+
+    stub_const('LolJob', Class.new do
       class << self
         def perform_later
           new.perform
@@ -22,11 +25,11 @@ describe 'Smoke tests' do
       end
 
       def perform
-        puts "#{self.class.name} => #{Time.current}"
+        LolJobResults << Time.current
       end
-    end
+    end)
 
-    class KekJob
+    stub_const('KekJob', Class.new do
       class << self
         def perform_later
           new.perform
@@ -34,9 +37,9 @@ describe 'Smoke tests' do
       end
 
       def perform
-        puts "#{self.class.name} => #{Time.current}"
+        KekJobResults << Time.current
       end
-    end
+    end)
 
     Sidekiq::Portal.setup! do |config|
       config.scheduler_config = {
@@ -46,5 +49,8 @@ describe 'Smoke tests' do
     end
 
     Timecop.travel(Time.current + 2.hours)
+
+    expect(LolJobResults.size).to eq(8)
+    expect(KekJobResults.size).to eq(2)
   end
 end

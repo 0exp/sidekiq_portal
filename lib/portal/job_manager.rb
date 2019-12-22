@@ -47,9 +47,16 @@ class Sidekiq::Portal::JobManager
   # @api private
   # @since 0.1.0
   def time_points
-    each_job.map(&:timeline).map!(&:time_points).tap(&:flatten!).tap(&:sort!).tap(&:uniq)
+    each_job
+      .map(&:timeline)
+      .map!(&:time_points)
+      .tap(&:flatten!)
+      .tap(&:sort!)
+      .tap(&:uniq)
+      .tap { |points| points.select! { |point| point <= Time.current } }
   end
 
+  # @param end_time [Time]
   # @param block [Block]
   # @yield time
   # @yieldparam time [Time]

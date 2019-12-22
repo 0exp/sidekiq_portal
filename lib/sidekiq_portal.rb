@@ -105,14 +105,6 @@ module Sidekiq
       end
     end
 
-    # @return [Array<Time>]
-    #
-    # @pai public
-    # @since 0.10.
-    def time_points
-      thread_safe { job_manager.time_points }
-    end
-
     private
 
     # @return [Sidekiq::Portal::JobManager]
