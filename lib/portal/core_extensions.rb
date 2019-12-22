@@ -37,7 +37,7 @@ module Sidekiq::Portal::CoreExtensions
     #
     # @api private
     # @since 0.1.0
-    def check_dependencies! # rubocop:disable Metrics/LineLength
+    def check_dependencies!
       unless defined?(::Timecop)
         raise(Sidekiq::Portal::CoreDependencyNotFoundError, '::Timecop not found')
       end
