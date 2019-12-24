@@ -1,10 +1,10 @@
 # Sidekiq::Portal
 
 **Sidekiq::Portal** - scheduled jobs runner for your test environments,
-which exection must occur during the `Timecop.travel(...)` operation according to the scheduler config.
+which execution must occur during the `Timecop.travel(...)` operations according to the scheduler config.
 
-Each job starts at the time it was supposed to start according to the scheduler -
-internal `Time.current` expression will contain exactly the scheduler-planned time.
+Each job starts at the time it was supposed to start according to the scheduler plan -
+the internal `Time.current` expression will give you exactly the scheduler-planned time.
 
 Supports **ActiveJob** backend (**Sidekiq::Worker** coming soon). Works with **sidekiq-scheduler**-based job configs (**sidekiq-cron** coming soon).
 
