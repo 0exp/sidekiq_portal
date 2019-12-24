@@ -53,7 +53,7 @@ require 'sidekiq_portal'
 ## Configuration
 
 - `default_timezone` (`UTC` by default) - global time zone for your jobs;
-- `retries_count` - recurring job simulation;
+- `retries_count` - Sidekiq's built-in retry mechanism simulation;
 - `scheduler_config` - `sidekiq-scheduler`-based scheduler configuration;;
 - `Sidekiq::Portal.reload!(&configuration)` - reload portal configurations;
 
