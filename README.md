@@ -1,6 +1,6 @@
 # Sidekiq::Portal [![Gem Version](https://badge.fury.io/rb/sidekiq_portal.svg)](https://badge.fury.io/rb/sidekiq_portal) [![Build Status](https://travis-ci.org/0exp/sidekiq_portal.svg?branch=master)](https://travis-ci.org/0exp/sidekiq_portal)
 
-> hackaton slides: ([link](https://github.com/0exp/sidekiq_portal/blob/master/docs/umbrellio_hackaton_v1.0.pdf)
+> hackaton slides: [link](https://github.com/0exp/sidekiq_portal/blob/master/docs/umbrellio_hackaton_v1.0.pdf)
 
 **Sidekiq::Portal** - scheduled jobs runner for your test environments,
 which execution process must occur during the `Timecop.travel(...)` operations according to the scheduler config.
