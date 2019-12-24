@@ -142,7 +142,6 @@ end
 
 ## Roadmap
 
-- Documentation and examples for instance-based portals (`Sidekiq::Portal.new(&configuration)`);
 - `Sidekiq::Testing.portal!` test mode with support for `:inline` and `:fake`;
   (`Sidekiq::Testing.inline!` and `Sidekiq::Testing.fake` respectively);
 - support for `ActiveSupport::Timezone` instances in `default_timezone` config;
@@ -152,6 +151,7 @@ end
 - support for `Sidekiq::Worker` job backend;
 - support for `Sidekiq::Cron` scheduler plans;
 - more specs;
+- documentation and examples for instance-based portals (`Sidekiq::Portal.new(&configuration)`);
 
 ## License
 
