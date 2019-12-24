@@ -152,6 +152,7 @@ end
 - support for `Sidekiq::Cron` scheduler plans;
 - more specs;
 - documentation and examples for instance-based portals (`Sidekiq::Portal.new(&configuration)`);
+- job execution randomization (for jobs which should be invoked at the same time);
 
 ## License
 
