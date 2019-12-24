@@ -25,6 +25,10 @@ class Sidekiq::Portal
 
   # @api public
   # @since 0.1.0
+  UnsupportedCoreDependencyError = Class.new(Error)
+
+  # @api public
+  # @since 0.1.0
   CoreDependencyNotFoundError = Class.new(Error)
 
   # @api public
