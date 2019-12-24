@@ -155,6 +155,9 @@ end
 - more specs;
 - documentation and examples for instance-based portals (`Sidekiq::Portal.new(&configuration)`);
 - job execution randomization (for jobs which should be invoked at the same time);
+- configurable in-line invokations (with job list config);
+- configurable and conditional portal invokation (run over all specs or only over the one or etc)
+  (suitable for unit tests);
 
 ## License
 
