@@ -13,9 +13,9 @@ Gem::Specification.new do |spec|
   spec.email = ['iamdaiver@icloud.com']
 
   spec.summary =
-    'Sidekiq::Portal - emulate job activity in tests when you work with time traleling.'
+    'Sidekiq::Portal - emulate job activity in tests when you work with time traveling.'
   spec.description =
-    'Sidekiq::Portal - emulate job activity in tests when you work with time traleling.'
+    'Sidekiq::Portal - emulate job activity in tests when you work with time traveling.'
 
   spec.homepage = 'https://github.com/0exp/sidekiq_portal'
   spec.license = 'MIT'
