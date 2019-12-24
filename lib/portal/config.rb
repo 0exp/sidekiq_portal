@@ -22,13 +22,13 @@ class Sidekiq::Portal::Config < Qonfig::DataSet
   DEFAUL_RETRIES_COUNT = 0
 
   setting :default_timezone, DEFAULT_TIMEZONE
-  setting :retries_count, DEFAUL_RETRIES_COUNT
+  setting :retry_count, DEFAUL_RETRIES_COUNT
   setting :scheduler_config, EMPTY_SCHEDULER_CONFIG
 
   validate :default_timezone do |value|
     value.is_a?(String) && !ActiveSupport::TimeZone[value].nil?
   end
 
-  validate :retries_count, :integer, strict: true
+  validate :retry_count, :integer, strict: true
   validate :scheduler_config, :hash, strict: true
 end
