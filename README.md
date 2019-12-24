@@ -1,4 +1,4 @@
-# Sidekiq::Portal
+# Sidekiq::Portal &middot; [![Gem Version](https://badge.fury.io/rb/sidekiq_portal.svg)](https://badge.fury.io/rb/sidekiq_portal) [![Build Status](https://travis-ci.org/0exp/sidekiq_portal.svg?branch=master)](https://travis-ci.org/0exp/sidekiq_portal)
 
 **Sidekiq::Portal** - scheduled jobs runner for your test environments,
 which execution must occur during the `Timecop.travel(...)` operations according to the scheduler config.
