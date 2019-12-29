@@ -52,7 +52,7 @@ class Sidekiq::Portal::JobManager
       .map!(&:time_points)
       .tap(&:flatten!)
       .tap(&:sort!)
-      .tap(&:uniq)
+      .tap(&:uniq!)
       .tap { |points| points.select! { |point| point <= Time.current } }
   end
 
