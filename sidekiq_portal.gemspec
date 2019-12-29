@@ -32,7 +32,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'fugit', '~> 1.3'
   spec.add_dependency 'activesupport', '>= 4'
 
-  spec.add_development_dependency 'armitage-rubocop', '~> 0.77'
+  spec.add_development_dependency 'armitage-rubocop', '~> 0.78'
   spec.add_development_dependency 'rspec', '~> 3.9.0'
   spec.add_development_dependency 'simplecov', '~> 0.17.1'
 
