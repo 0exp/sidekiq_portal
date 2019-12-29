@@ -146,7 +146,7 @@ end
 
 - `Sidekiq::Testing.portal!` test mode with support for `:inline` and `:fake`;
   (`Sidekiq::Testing.inline!` and `Sidekiq::Testing.fake` respectively);
-- support for `ActiveSupport::Timezone` instances in `default_timezone` config;
+- support for `ActiveSupport::TimeZone` instances in `default_timezone` config;
 - support for retries;
 - rspec matchers;
 - `#reload!` should use previosly defined settings?;
