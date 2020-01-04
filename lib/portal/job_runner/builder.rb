@@ -10,7 +10,10 @@ module Sidekiq::Portal::JobRunner::Builder
     # @api private
     # @since 0.1.0
     def build(config)
-      Sidekiq::Portal::JobRunner.new
+      Sidekiq::Portal::JobRunner.new(
+        config.settings.retry_count,
+        config.settings.retry_on
+      )
     end
   end
 end
