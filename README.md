@@ -54,10 +54,10 @@ require 'sidekiq_portal'
 
 ## Configuration
 
-- `default_timezone` (`UTC` by default) - global time zone for your jobs;
-- `retry_count` - Sidekiq's built-in retry mechanism simulation;
+- `default_timezone` - global time zone for your jobs (`UTC` by default) ;
+- `retry_count` - Sidekiq's built-in retry mechanism simulation (`0` by default)
 - `retry_on` - retry only on a set of exceptions (`[StandardError]` by default);
-- `scheduler_config` - `sidekiq-scheduler`-based scheduler configuration;;
+- `scheduler_config` - `sidekiq-scheduler`-based scheduler configuration (`{}` by default (non-configured));
 - `Sidekiq::Portal.reload!(&configuration)` - reload portal configurations;
 
 In your `spec_helper.rb`:
@@ -66,7 +66,7 @@ In your `spec_helper.rb`:
 # portal configuration
 Sidekiq::Portal.setup! do |config|
   config.default_timezone = 'UTC' # 'UTC' by default
-  config.retry_count = 3 # 1 by default
+  config.retry_count = 3 # 0 by default
   config.retry_on = [StandardError] # [StandardError] by default
 
   # pre-defined sidekiq-scheduler configs (Rails example)
