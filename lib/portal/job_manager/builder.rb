@@ -10,19 +10,18 @@ class Sidekiq::Portal::JobManager::Builder
     # @api private
     # @since 0.1.0
     def build(config)
-      new(config.settings.scheduler_config, config.settings.default_timezone).build
+      new(config).build
     end
   end
 
-  # @param scheduled_jobs_config [Hash]
-  # @param timezone [String]
+  # @param config [Sidekiq::Portal::Config]
   # @return [void]
   #
   # @api private
   # @since 0.1.0
-  def initialize(scheduled_jobs_config, timezone)
-    @scheduled_jobs_config = scheduled_jobs_config
-    @timezone = timezone
+  def initialize(config)
+    @scheduled_jobs_config = config.settings.scheduler_config
+    @timezone = config.settings.default_timezone
   end
 
   # @return [Sidekiq::Portal::Manager]

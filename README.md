@@ -54,9 +54,10 @@ require 'sidekiq_portal'
 
 ## Configuration
 
-- `default_timezone` (`UTC` by default) - global time zone for your jobs;
-- `retry_count` - Sidekiq's built-in retry mechanism simulation;
-- `scheduler_config` - `sidekiq-scheduler`-based scheduler configuration;;
+- `default_timezone` - global time zone for your jobs (`UTC` by default);
+- `retry_count` - Sidekiq's built-in retry mechanism simulation (`0` by default);
+- `retry_on` - retry only on a set of exceptions (`[StandardError]` by default);
+- `scheduler_config` - `sidekiq-scheduler`-based scheduler configuration (`{}` by default (non-configured));
 - `Sidekiq::Portal.reload!(&configuration)` - reload portal configurations;
 
 In your `spec_helper.rb`:
@@ -64,8 +65,9 @@ In your `spec_helper.rb`:
 ```ruby
 # portal configuration
 Sidekiq::Portal.setup! do |config|
-  config.default_timezone = 'UTC'
-  config.retry_count = 1
+  config.default_timezone = 'UTC' # 'UTC' by default
+  config.retry_count = 3 # 0 by default
+  config.retry_on = [StandardError] # [StandardError] by default
 
   # pre-defined sidekiq-scheduler configs (Rails example)
   config.scheduler_cofnig = Rails.application.config_for(:sidekiq)[:schedule]
@@ -147,7 +149,6 @@ end
 - `Sidekiq::Testing.portal!` test mode with support for `:inline` and `:fake`;
   (`Sidekiq::Testing.inline!` and `Sidekiq::Testing.fake` respectively);
 - support for `ActiveSupport::TimeZone` instances in `default_timezone` config;
-- support for retries;
 - rspec matchers;
 - `#reload!` should use previosly defined settings?;
 - support for `Sidekiq::Worker` job backend;
