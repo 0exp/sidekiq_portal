@@ -159,6 +159,7 @@ end
 - configurable in-line invokations (with job list config);
 - configurable and conditional portal invokation (run over all specs or only over the one or etc)
   (suitable for unit tests);
+- support for **Ruby 2.7**;
 
 ## License
 
