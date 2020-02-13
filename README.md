@@ -70,10 +70,10 @@ Sidekiq::Portal.setup! do |config|
   config.retry_on = [StandardError] # [StandardError] by default
 
   # pre-defined sidekiq-scheduler configs (Rails example)
-  config.scheduler_cofnig = Rails.application.config_for(:sidekiq)[:schedule]
+  config.scheduler_config = Rails.application.config_for(:sidekiq)[:schedule]
 
   # manual sidekiq-scheduler configs
-  config.schedluer_config = {
+  config.scheduler_config = {
     LoolJob: { every: '15m' },
     kek_job: { cron: '0 * * * * *', class: :KekJob }
   }
