@@ -160,6 +160,7 @@ end
 - configurable and conditional portal invokation (run over all specs or only over the one or etc)
   (suitable for unit tests);
 - support for **Ruby 2.7**;
+- getting rid of **ActiveSupport**'s **Time**-related core extentions;
 
 ## License
 
