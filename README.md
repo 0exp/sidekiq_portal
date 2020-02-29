@@ -164,6 +164,7 @@ end
 - support for **Ruby 2.7**;
 - **Time** as external dependency;
 - getting rid of **ActiveSupport**'s **Time**-related core extentions;
+- better specs;
 
 ## License
 
