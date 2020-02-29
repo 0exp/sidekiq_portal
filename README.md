@@ -157,7 +157,8 @@ end
 - support for `Sidekiq::Cron` scheduler plans;
 - more specs;
 - documentation and examples for instance-based portals (`Sidekiq::Portal.new(&configuration)`);
-- job execution randomization (for jobs which should be invoked at the same time);
+- configurable job execution randomization (for jobs which should be invoked at the same time)
+  (randomized invokation and not - at the same time or not);
 - configurable in-line invokations (with job list config);
 - configurable and conditional portal invokation (run over all specs or only over the one or etc)
   (suitable for unit tests);
