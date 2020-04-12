@@ -3,7 +3,11 @@
 require 'simplecov'
 
 SimpleCov.formatter = SimpleCov::Formatter::HTMLFormatter
-SimpleCov.start { add_filter 'spec' }
+SimpleCov.minimum_coverage(100)
+SimpleCov.start do
+  enable_coverage :branch
+  add_filter 'spec'
+end
 
 require 'bundler/setup'
 require 'sidekiq_portal'
