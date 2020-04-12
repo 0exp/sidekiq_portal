@@ -28,13 +28,13 @@ Gem::Specification.new do |spec|
     f.match(%r{^(test|spec|features)/})
   end
 
-  spec.add_dependency 'qonfig', '~> 0.23'
+  spec.add_dependency 'qonfig', '~> 0.24'
   spec.add_dependency 'fugit', '~> 1.3'
   spec.add_dependency 'activesupport', '>= 4', '< 7'
 
-  spec.add_development_dependency 'armitage-rubocop', '~> 0.78'
-  spec.add_development_dependency 'rspec', '~> 3.9.0'
-  spec.add_development_dependency 'simplecov', '~> 0.17.1'
+  spec.add_development_dependency 'armitage-rubocop', '~> 0.81'
+  spec.add_development_dependency 'rspec', '~> 3.9'
+  spec.add_development_dependency 'simplecov', '~> 0.18'
 
   spec.add_development_dependency 'sidekiq', '>= 5', '< 7'
   spec.add_development_dependency 'timecop', '~> 0.9'
