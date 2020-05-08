@@ -4,7 +4,7 @@
 
 > meetup slides: [link](https://github.com/0exp/sidekiq_portal/blob/master/docs/sidekiq_portal_ruby_group_meetup.pdf)
 
-> meetup: [link](https://youtu.be/H3SafkpBQ_w?t=12288)
+> meetup video: [link](https://youtu.be/H3SafkpBQ_w?t=12288)
 
 **Sidekiq::Portal** - scheduled jobs runner for your test environments,
 which execution process must occur during the `Timecop.travel(...)` operations according to the scheduler config.
