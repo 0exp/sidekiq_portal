@@ -35,7 +35,7 @@ gem 'timecop', '~> 0.9' # runtime dependency
 
 group :test do
   gem 'rspec'
-  gem 'sidekiq-portal'
+  gem 'sidekiq_portal'
 end
 ```
 
