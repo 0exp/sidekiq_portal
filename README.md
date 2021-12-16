@@ -45,7 +45,7 @@ end
 bundle install
 ```
 
-- `scec_helper.rb`:
+- `spec_helper.rb`:
 
 ```ruby
 require 'timecop' # runtime dependency
@@ -154,19 +154,19 @@ end
   (`Sidekiq::Testing.inline!` and `Sidekiq::Testing.fake` respectively);
 - support for `ActiveSupport::TimeZone` instances in `default_timezone` config;
 - rspec matchers;
-- `#reload!` should use previosly defined settings?;
+- `#reload!` should use previously defined settings?;
 - support for `Sidekiq::Worker` job backend;
 - support for `Sidekiq::Cron` scheduler plans;
 - more specs;
 - documentation and examples for instance-based portals (`Sidekiq::Portal.new(&configuration)`);
 - configurable job execution randomization (for jobs which should be invoked at the same time)
-  (randomized invokation and not - at the same time or not);
-- configurable in-line invokations (with job list config);
-- configurable and conditional portal invokation (run over all specs or only over the one or etc)
+  (randomized invocation and not - at the same time or not);
+- configurable in-line invocations (with job list config);
+- configurable and conditional portal invocation (run over all specs or only over the one or etc)
   (suitable for unit tests);
 - support for **Ruby 2.7**;
 - **Time** as external dependency;
-- getting rid of **ActiveSupport**'s **Time**-related core extentions;
+- getting rid of **ActiveSupport**'s **Time**-related core extensions;
 - better specs;
 
 ## License
