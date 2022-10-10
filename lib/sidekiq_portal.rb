@@ -2,6 +2,7 @@
 
 require 'qonfig'
 require 'fugit'
+require 'active_support/isolated_execution_state'
 require 'active_support/core_ext/numeric/time'
 require 'active_support/core_ext/time'
 require 'active_support/core_ext/time/calculations'
