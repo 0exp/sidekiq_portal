@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 ## [0.3.0] - 2022-10-10
 ### Added
 - Support for Rails@7;
+- Support for Sidekiq@6 and experimental Sidekiq@7;
 
 ### Changed
 - Updated development dependencies;
