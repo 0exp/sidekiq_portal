@@ -1,6 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.3.0] - 2022-10-10
+### Added
+- Support for Rails@7;
+
+### Changed
+- Updated development dependencies;
+- Updated core dependencies (`qonfig`, `active_support`, `fugit`);
+- Minimal Ruby version - `>= 2.5`;
+
 ## [0.2.0] - 2020-01-04
 ### Added
 - Sidekiq's job retry mechanism emulation;
