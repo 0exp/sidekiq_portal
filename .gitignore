@@ -13,4 +13,3 @@
 /spec/artifacts/
 /gemfiles/*.gemfile.lock
 *.gem
-Gemfile.lock
