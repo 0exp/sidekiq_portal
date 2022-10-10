@@ -38,7 +38,7 @@ class Sidekiq::Portal::Config < Qonfig::DataSet
 
   # @since 0.1.0
   validate :default_timezone do |value|
-    value.is_a?(String) && !ActiveSupport::TimeZone[value].nil?
+    value.is_a?(String) && ActiveSupport::TimeZone[value] != nil
   end
 
   # @since 0.1.0
