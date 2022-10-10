@@ -30,7 +30,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'qonfig', '~> 0.28'
   spec.add_dependency 'fugit', '~> 1.7'
-  spec.add_dependency 'activesupport', '>= 4', '<= 7'
+  spec.add_dependency 'activesupport', '>= 4', '< 8'
 
   spec.add_development_dependency 'armitage-rubocop', '~> 1.36'
   spec.add_development_dependency 'rspec', '~> 3.11'

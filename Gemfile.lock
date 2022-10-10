@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    sidekiq_portal (0.3.0)
-      activesupport (>= 4, <= 7)
+    sidekiq_portal (0.3.1)
+      activesupport (>= 4, < 8)
       fugit (~> 1.7)
       qonfig (~> 0.28)
 

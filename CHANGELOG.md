@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.3.1] - 2022-10-10
+### Fixed
+- Fixed `ActiveSupport`'s dependnecy lock which did not allow the use of Rails@7;
+
 ## [0.3.0] - 2022-10-10
 ### Added
 - Support for Rails@7;
