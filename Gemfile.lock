@@ -111,7 +111,7 @@ DEPENDENCIES
   pry (~> 0.14)
   rake (~> 13.0)
   rspec (~> 3.11)
-  sidekiq (>= 5)
+  sidekiq (>= 5, <= 7)
   sidekiq_portal!
   simplecov (~> 0.21)
   timecop (~> 0.9)

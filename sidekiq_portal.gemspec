@@ -36,7 +36,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec', '~> 3.11'
   spec.add_development_dependency 'simplecov', '~> 0.21'
 
-  spec.add_development_dependency 'sidekiq', '>= 5'
+  spec.add_development_dependency 'sidekiq', '>= 5', '<= 7'
   spec.add_development_dependency 'timecop', '~> 0.9'
 
   spec.add_development_dependency 'bundler', '~> 2.3'
