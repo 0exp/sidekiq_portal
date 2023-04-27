@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.3.2] - 2023-04-27
+- Support for `:class` option name for job class name in scheduler config;
+
 ## [0.3.1] - 2022-10-10
 ### Fixed
 - Fixed `ActiveSupport`'s dependnecy lock which did not allow the use of Rails@7;

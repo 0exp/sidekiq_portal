@@ -2,6 +2,7 @@
 
 # @api private
 # @since 0.1.0
+# @version 0.3.2
 class Sidekiq::Portal::JobManager::Builder
   class << self
     # @param config [Sidekiq::Portal::Config]
@@ -63,12 +64,14 @@ class Sidekiq::Portal::JobManager::Builder
   #
   # @api private
   # @since 0.1.0
+  # @version 0.3.2
   def resolve_job_klass(job_config_series, scheduler_options)
-    job_klass = scheduler_options['class'].to_s.constantize rescue nil
+    job_klass_name = scheduler_options['class'] || scheduler_options[:class]
+    job_klass = job_klass_name.to_s.constantize rescue nil
     job_klass ||= job_config_series.to_s.constantize rescue nil
 
     raise(Sidekiq::Portal::ConfusingJobConfigError, <<~ERROR_MESSAGE) unless job_klass
-      Can't resolve job class from \"#{scheduler_options['class'] || job_config_series}\" job name
+      Can't resolve job class from \"#{job_klass_name || job_config_series}\" job name
     ERROR_MESSAGE
 
     job_klass
