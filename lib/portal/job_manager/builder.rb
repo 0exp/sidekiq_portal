@@ -71,7 +71,7 @@ class Sidekiq::Portal::JobManager::Builder
     job_klass ||= job_config_series.to_s.constantize rescue nil
 
     raise(Sidekiq::Portal::ConfusingJobConfigError, <<~ERROR_MESSAGE) unless job_klass
-      Can't resolve job class from \"#{job_klass_name || job_config_series}\" job name
+      Can't resolve job class from "#{job_klass_name || job_config_series}" job name
     ERROR_MESSAGE
 
     job_klass

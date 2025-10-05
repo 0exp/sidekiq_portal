@@ -164,7 +164,6 @@ end
 - configurable in-line invocations (with job list config);
 - configurable and conditional portal invocation (run over all specs or only over the one or etc)
   (suitable for unit tests);
-- support for **Ruby 2.7**;
 - **Time** as external dependency;
 - getting rid of **ActiveSupport**'s **Time**-related core extensions;
 - better specs;

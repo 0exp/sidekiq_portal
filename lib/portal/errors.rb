@@ -2,7 +2,7 @@
 
 # @api public
 # @since 0.1.0
-class Sidekiq::Portal
+class Sidekiq::Portal # rubocop:disable Style/StaticClass
   # @api public
   # @since 0.1.0
   Error = Class.new(StandardError)
