@@ -1,6 +1,7 @@
 # Sidekiq::Portal [![Gem Version](https://badge.fury.io/rb/sidekiq_portal.svg)](https://badge.fury.io/rb/sidekiq_portal)
 
-[![Tests (RSpec)](https://github.com/0exp/sidekiq_portal/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/0exp/sidekiq_portal/actions) [![Lint (Rubocop)](https://github.com/0exp/sidekiq/actions/workflows/lint.yml/badge.svg?branch=master)](https://github.com/0exp/sidekiq_portal/actions)
+[![Tests (RSpec)](https://github.com/0exp/sidekiq_portal/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/0exp/sidekiq_portal/actions)
+[![Lint (Rubocop)](https://github.com/0exp/sidekiq_portal/actions/workflows/lint.yml/badge.svg?branch=master)](https://github.com/0exp/sidekiq_portal/actions)
 
 > hackaton slides: [link](https://github.com/0exp/sidekiq_portal/blob/master/docs/umbrellio_hackaton_v1.0.pdf)
 
