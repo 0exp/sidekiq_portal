@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [0.4.0] - 2025-10-05
+## [1.0.0] - 2025-10-05
 ### Added
 - Support for *Rails@8* and *Sidekiq@8*;
 - Drop EOL rubies from support (now we supports Ruby >= 3.2);

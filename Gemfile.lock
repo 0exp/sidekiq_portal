@@ -165,15 +165,15 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  armitage-rubocop (>= 1.75)
-  bundler (~> 2.7)
-  pry (~> 0.14)
-  rake (~> 13.3)
-  rspec (~> 3.13)
-  sidekiq (>= 5, < 9)
+  armitage-rubocop
+  bundler
+  pry
+  rake
+  rspec
+  sidekiq
   sidekiq_portal!
-  simplecov (~> 0.2)
-  timecop (~> 0.9)
+  simplecov
+  timecop
 
 BUNDLED WITH
    2.7.1

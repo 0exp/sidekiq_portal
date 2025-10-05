@@ -31,15 +31,4 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'qonfig', '~> 0.28'
   spec.add_dependency 'fugit', '~> 1.7'
   spec.add_dependency 'activesupport', '>= 4', '< 9'
-
-  spec.add_development_dependency 'armitage-rubocop', '>= 1.75'
-  spec.add_development_dependency 'rspec', '~> 3.13'
-  spec.add_development_dependency 'simplecov', '~> 0.2'
-
-  spec.add_development_dependency 'sidekiq', '>= 5', '< 9'
-  spec.add_development_dependency 'timecop', '~> 0.9'
-
-  spec.add_development_dependency 'bundler', '~> 2.7'
-  spec.add_development_dependency 'rake', '~> 13.3'
-  spec.add_development_dependency 'pry', '~> 0.14'
 end

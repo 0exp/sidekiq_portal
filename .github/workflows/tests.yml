@@ -1,0 +1,45 @@
+name: Tests (RSpec)
+on: [push]
+jobs:
+  test-previous:
+    name: '(os: ${{ matrix.os }}) (ruby@${{ matrix.ruby_version }})'
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby_version: ['3.3']
+        os: [ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    env:
+      BUNDLE_RETRY: 3
+      BUNDLE_JOBS: 4
+      BUNDLE_FORCE_RUBY_PLATFORM: 1
+    steps:
+      - uses: actions/checkout@v4
+      - uses: supercharge/redis-github-action@1.7.0
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby_version }}
+          bundler-cache: true
+      - name: (Test) RSpec
+        run: bundle exec rake rspec
+  test-mainstream:
+    name: 'Tests (os: ${{ matrix.os }}) (ruby@${{ matrix.ruby_version }})'
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby_version: ['3.4']
+        os: [ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    env:
+      BUNDLE_RETRY: 3
+      BUNDLE_JOBS: 4
+      BUNDLE_FORCE_RUBY_PLATFORM: 1
+    steps:
+      - uses: actions/checkout@v4
+      - uses: supercharge/redis-github-action@1.7.0
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby_version }}
+          bundler-cache: true
+      - name: Tests (RSpec)
+        run: bundle exec rake rspec
