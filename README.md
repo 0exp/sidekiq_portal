@@ -169,6 +169,7 @@ end
 - **Time** as external dependency;
 - getting rid of **ActiveSupport**'s **Time**-related core extensions;
 - better specs;
+- 100% test coverage;
 
 ## License
 
